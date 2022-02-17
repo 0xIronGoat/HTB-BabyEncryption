@@ -4,7 +4,7 @@ def decryption(msg):
     # For every byte in the encrypted msg, loop through all the 128 possible ASCII character codes (0 - 127)
     # And perform same calculation on that character as is done in the chall.py file
     for byte in msg:
-        for char in range(128):
+        for char in range(256):
             encrypted_char = ((123 * char + 18) % 256)
             # If resulting encrypted_char is same as the byte in the message we're currently looking at
             # Then add char to the pt[] array
